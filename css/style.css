@@ -1,0 +1,135 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: font;
+    src: url(OpenSans-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: fontheader;
+    src: url(BungeeShade-Regular.ttf);
+}
+body {
+    font-family: font;
+}
+a {
+    text-decoration: none !important
+}
+a:hover {
+    color: #000 !important
+}
+.as-font {
+    font-family: fontheader;
+}
+.as-bg-gray {
+    background-color: #f7f7f7 !important;
+}
+.as-hover:hover {
+    color: #000 !important;
+}
+.bg-img {
+    background-image: url('../img/pozadina1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background-size: cover;
+}
+.random h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 700;
+}
+.random h2 {
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: 700;
+}
+.as-transparent {
+    background: rgba(255, 255, 255, 0.9);
+}
+.row {
+    --bs-gutter-x: 0rem !important;
+}
+.as-about-h1 {
+    text-align: center;
+}
+.as-about-h2 {
+    text-align: center;
+}
+.as-about-h1 h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.as-about-h2 h2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.as-about-h1 p {
+    font-size: 22px;
+}
+.as-width {
+    width: 70%;
+    margin-left: 70px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.as-project {
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.as-margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.as-margin-3 {
+    margin-bottom: 100px;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #1e1e1e;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(0, 0, 0, 0.8) !important
+}
+.accordion-button:not(.collapsed) {
+    background-color: #000 !important
+}
+.accordion-button:not(.collapsed) {
+    color: #fff !important
+}
+.accordion-button::after {
+    background-image: none !important
+}
+.card {
+    border: 1px solid #000;
+}
+.as-transparent2 {
+    background-color: #e3e3e3 !important
+}
+.form-control {
+    box-shadow: 0 0 0 .0rem rgba(0, 0, 0, 1) !important
+}
+.form-select {
+    box-shadow: 0 0 0 .0rem rgba(0, 0, 0, 1) !important
+}
+.slika {
+    width: 100%;
+}
+.slika img {
+    margin-left: 80px;
+    padding-bottom: 10px;
+}
+.as-font {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.as-button {
+    width: 80%;
+}
+video {
+    width: 90%;
+    margin-left: 25px;
+    border: 1px solid #000;
+}
