@@ -87,6 +87,31 @@
     video {
         margin-left: 30px;
     }
+    .as-promena1{
+        width: 100%;
+    }
+    .as-promena1 li {
+        margin:0px auto;    
+    }
+    .as-pozicija a {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 0px !important
+    }
+    .as-pozicija a {
+        margin-right: 0px !important
+    }
+    .as-promena2{
+        width: 100%;
+        text-align: center;
+    }
+    .as-promena3{
+        width: 100%;
+    }
+    .blok{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 481px) {
     .random h1 {
@@ -114,6 +139,14 @@
     video {
         margin-left: 23px;
     }
+    .as-promena2{
+        width: 100%;
+        text-align: center;
+
+    }
+    .as-promena3{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 426px) {
     .random h1 {
@@ -127,6 +160,10 @@
     }
     video {
         margin-left: 21px;
+    }
+    #about{
+        width: 335PX; /*404-78 = 325 548 - 78= 470*/
+        height: 470px;
     }
 }
 @media screen and (max-width: 376px) {
@@ -160,4 +197,11 @@
     video {
         margin-left: 17px;
     }
+    #as-navbar .fs-5 {
+        font-size: 0.77rem !important;
+}
+#about{
+    width: 318PX; 
+    height: 440px;
+}
 }

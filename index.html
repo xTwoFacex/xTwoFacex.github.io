@@ -23,28 +23,12 @@
                     <div class="row">
                         <div class="col">
                             <nav class="navbar navbar-expand-lg  navbar-light as-bg-gray">
-                                <div class="container-fluid ">
-                                  <a class="navbar-brand as-font text-black fs-3 ps-5 as-padding as-hoverL" href="index.html">CODEX</a>
-                                  <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                  </button>
-                                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                                    <ul class="navbar-nav">
-                                      <li class="nav-item pe-5">
-                                        <a class="nav-link active text-black as-hover" aria-current="page" href="index.html">Home</a>
-                                      </li>
-                                      <li class="nav-item pe-5">
-                                        <a class="nav-link text-black as-hover" href="pricing.html">Pricing</a>
-                                      </li>
-                                      <li class="nav-item pe-5">
-                                        <a class="nav-link text-black as-hover" href="reviews.html">Reviews</a>
-                                      </li>
-                                      <li class="nav-item pe-5">
-                                        <a class="nav-link text-black as-hover" href="https://xriddlerx.github.io/" target="_blank">About me</a>
-                                      </li>
-                                    </ul>
-                                  </div>
+                              <div class="container-fluid ">
+                                <a class="navbar-brand as-font text-black fs-3 ps-5 as-padding as-hoverL as-promena2" href="index.html">CODEX</a>
+                                <div id="as-navbar" class="blok">
+                                 <!--Dinamicki ispisani meni-->
                                 </div>
+                              </div>
                             </nav>
                         </div>
                     </div>
@@ -76,69 +60,23 @@
             <h2>Meet our team</h2>
           </div>
       </div>
-      <div class="row ">
-        <div class="col-xxl-3 col-md-6 col-12 ">
-          <div class="card as-width border border-dark">
-            <img src="img/slika.jpg" class="card-img-top" alt="editor"/>
-            <div class="card-body">
-              <h5 class="card-title">Aleksandar Simić</h5>
-              <p class="card-text">Hi my name is Aleksandar and i am the video editor of the group. I have been editing for quite some time now and i am really enjoying it.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xxl-3 col-md-6 col-12">
-          <div class="card as-width border border-dark">
-            <img src="img/tim1.jpg" class="card-img-top" alt="animator"/>
-            <div class="card-body">
-              <h5 class="card-title">Boris Jovanović</h5>
-              <p class="card-text">Hi my name is Boris and i am a animator of the group. I make custom intros and outros and making some animations for the YouTube videos.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xxl-3 col-md-6 col-12">
-          <div class="card as-width border border-dark">
-            <img src="img/tim2.jpg" class="card-img-top" alt="photoshop"/>
-            <div class="card-body">
-              <h5 class="card-title">Stefan Milić</h5>
-              <p class="card-text">Hi my name is Stefan and i am the photographer of the group. At the moment i am creating thumbnails for the YouTube videos.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xxl-3 col-md-6 col-12">
-          <div class="card as-width border border-dark">
-            <img src="img/tim3.jpg" class="card-img-top" alt="business"/>
-            <div class="card-body">
-              <h5 class="card-title">Mateja Radivojević</h5>
-              <p class="card-text">Hi my name is Mateja and i am the administrator of the group. I am sending all of the information to others in terms of oreders (mail) etc. </p>
-            </div>
-          </div>
-        </div>
+      <div class="row" id="as-tim">
+        <!--Tim je dinamicki ispisan-->
       </div>
     </div>
     <div class="container-fluid pe-0 ps-0">
       <div class="row">
-          <div class="col-10 mx-auto border border-dark rounded">
-              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="img/slika11.jpg" class="d-block w-100" alt="editing"/>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="img/slika22.jpg" class="d-block w-100" alt="video"/>
-                    </div>
-                    <div class="carousel-item">
-                      <img src="img/slika33.jpg" class="d-block w-100" alt="professional"/>
-                    </div>
+            <div class="col" id="slajder">
+              <div class="slajd aktivan">
+                  <img src="img/slika11.jpg" alt="editing" class="img-fluid"/>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-              </button>
-          </div>
+              <div class="slajd">
+                  <img src="img/slika22.jpg" alt="video" class="img-fluid"/>
+              </div>
+              <div class="slajd">
+                  <img src="img/slika33.jpg" alt="professional" class="img-fluid"/>
+              </div>
+            </div> 
       </div>
     </div>
     <div class="container-fluid pe-0 ps-0">
@@ -146,56 +84,9 @@
         <div class="col-12 as-about-h1">
             <h1>Our biggest projects</h1>
         </div>
-    </div>
-      <div class="row">
-        <div class="col-lg-4 col-12">
-          <div class="card as-project mx-auto text-center border border-dark">
-            <img src="img/ytlogo2.jpg" class="card-img-top" alt="Eu_Drip"/>
-            <div class="card-body">
-              <h5 class="card-title">Eu Drip</h5>
-              <p class="card-text">Very big YouTuber with almost 100k subscribers. He does gaming content in genereal with some try not laugh challenges here and there.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">YouTube subscribers: 95k</li>
-              <li class="list-group-item">TikTok followers: 6.4m</li>
-            </ul>
-            <div class="card-body">
-              <a href="https://www.youtube.com/c/EUDrip" target="_blank" class="btn btn-dark btn-outline-light">YouTube</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-12">
-          <div class="card as-project mx-auto text-center border border-dark">
-            <img src="img/ytlogo1.jpg" class="card-img-top" alt="Truegawd"/>
-            <div class="card-body">
-              <h5 class="card-title">Truegawd</h5>
-              <p class="card-text">Very big YouTuber with 188k subscribers.He does mainly reaction videos but he has a second channel where he plays games.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">YouTube subscribers: 188k</li>
-              <li class="list-group-item">2nd channel subscribers: 9.3k</li>
-            </ul>
-            <div class="card-body">
-              <a href="https://www.youtube.com/c/TrueGawd" target="_blank" class="btn btn-dark btn-outline-light">YouTube</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-12">
-          <div class="card as-project mx-auto text-center border border-dark">
-            <img src="img/ytlogo3.jpg" class="card-img-top" alt="Davej974"/>
-            <div class="card-body">
-              <h5 class="card-title">Davej974</h5>
-              <p class="card-text">Upcoming star of YouTube with 4.5k subscribers. He does videos like MrBeast for example donation videos to twitch streamers.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">YouTube subscribers: 4.5k</li>
-              <li class="list-group-item">Twitch followers: 4.4k</li>
-            </ul>
-            <div class="card-body">
-              <a href="https://www.youtube.com/c/Davej974" target="_blank" class="btn btn-dark btn-outline-light">YouTube</a>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="row" id="as-projects">
+        <!--Dinamicki ispisano-->
       </div>
     </div>
     <div class="container-fluid pe-0 ps-0">
@@ -259,26 +150,13 @@
       <div class="row">
         <div class="col">
           <nav class="navbar navbar-expand-lg  navbar-light as-bg-gray">
-              <div class="container-fluid as-pozicija">
-                <a class="navbar-brand as-font text-black fs-3 ps-5 as-padding as-hoverL" href="index.html">CODEX</a>
-                <ul class="nav justify-content-end pe-3">
-                  <li class="nav-item fs-5">
-                    <a class="nav-link active text-muted" href="https://www.facebook.com/" target="_blank"><span class="iconify" data-icon="cib:facebook-f"></span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fs-5 text-muted" href="https://www.instagram.com/" target="_blank"><span class="iconify" data-icon="akar-icons:instagram-fill"></span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fs-5 text-muted" href="https://www.linkedin.com/" target="_blank"><span class="iconify" data-icon="akar-icons:linkedin-fill"></span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fs-5 text-muted" href="https://www.youtube.com/" target="_blank"><span class="iconify" data-icon="ant-design:youtube-outlined"></span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fs-5 text-muted" href="sitemap.xml" target="_blank"><span class="iconify" data-icon="fa:sitemap"></span></a>
-                  </li>
-                </ul>
+            <div class="container-fluid as-pozicija">
+              <a class="navbar-brand as-font text-black fs-3 ps-5 as-padding as-hoverL as-promena2" href="index.html">CODEX</a>
+              <a class="navbar-brand as-font text-black fs-0 ps-5 as-padding as-hoverL as-promena3" href="web.pdf" target="_blank">DOKUMENTACIJA</a>
+              <div id="ikone" class="blok">
+              <!--Dinamicki ispisani footer-->
               </div>
+            </div>
           </nav>
         </div>
       </div>
@@ -287,5 +165,9 @@
         <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
         <!--Bootstrap 5 Js-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!--Java Script-->
+        <script src="JavaScript/custom.js" type="text/javascript"></script>
+        <!--Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </body>
 </html>
