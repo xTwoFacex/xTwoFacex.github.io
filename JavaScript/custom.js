@@ -1,6 +1,5 @@
 window.onload = function(){
     $(document).ready(function(){
-    
     let url = document.location.pathname;
     console.log(url);
     if(url == "/" || url == "/index.html"){
@@ -19,12 +18,13 @@ window.onload = function(){
         let opis = ["Very big YouTuber with almost 100k subscribers. He does gaming content in genereal with some try not laugh challenges here and there.","Very big YouTuber with 188k subscribers.He does mainly reaction videos but he has a second channel where he plays games.","Upcoming star of YouTube with 4.5k subscribers. He does videos like MrBeast for example donation videos to twitch streamers."];
         let broj1 = ["YouTube subscribers: 95k","YouTube subscribers: 188k","YouTube subscribers: 4.5k"];
         let broj2 = ["TikTok followers: 6.4m","2nd channel subscribers: 9.3k","Twitch followers: 4.4k"];
-        let link = ["https://www.youtube.com/c/EUDrip","https://www.youtube.com/c/TrueGawd","https://www.youtube.com/c/Davej974"];
+        let link = ["https://www.youtube.com/c/EUDrip","https://www.youtube.com/c/TrueGawd","https://www.youtube.com/"];
         IspisProjekata(nizSlika1,nizAltAtt1,naslov,opis,broj1,broj2,link);
         slajder();
     }
     if(url == "/pricing.html"){
         IspisMeny();
+        IspisPaketa();
         IspisFooterLinks();
         //forma
         let type =["text","text","email"];
@@ -37,67 +37,71 @@ window.onload = function(){
         let valueradio=["P","V"];
         let sadrzajradio=["PayPal","Visa"];
         IspisForme(type,id,placeholder,sadrzaj,valueListe,optionliste,idradio,valueradio,sadrzajradio);
-        reIme = /^[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}(\s[A-Z][a-z]{2,14}){0,1}$/;
-        rePrezime = /^[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}(\s[A-Z][a-z]{2,14}){0,1}$/;
-        reEmail = /^[a-z]{3,15}(\.)?([a-z]{3,15})?\@(gmail\.com)|(yahoo\.com)$/;
-        rePayPal = /^[a-z]{3,15}(\.)?([a-z]{3,15})?\@(gmail\.com)|(yahoo\.com)$/;
+        reIme = /^[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}(\s[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}){0,1}$/;
+        rePrezime = /^[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}(\s[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}){0,1}$/;
+        reEmail = /^[a-z]{3,15}(\.)?([a-z]{3,15})?\@((gmail\.com)|(yahoo\.com))$/;
+        rePayPal = /^[a-z]{3,15}(\.)?([a-z]{3,15})?\@((gmail\.com)|(yahoo\.com))$/;
         reVisaNumber = /^[0-9]{4}(\-([0-9]{4})){3}$/
         //Obrada
-        $('#taster').click(function(){
-            ProveraForme(reIme,"#ime","You have entered a wrong format for name. This is an correct example: Aleksandar");
-            ProveraForme(rePrezime,"#prezime","You have entered a wrong format for surname. This is an correct example: Simić");
-            ProveraForme(reEmail,"#email","You have entered a wrong format for email. This is an correct example: aleksandar@gmail.com or aleksandar.simic@yahoo.com");
-            ProveraForme(rePayPal,"#pyapal","You must enter a right format for paypal email. A correct example: aleksandar@gmail.com or aleksandar.simic@yahoo.com");
-            ProveraForme(reVisaNumber,"#visa","You must enter a right format for your card number. A correct example: 1234-5678-9101-1123");
+            $('#taster').click(function(){
+            ProveraForme(reIme,"#ime","You have entered a wrong format for name. This is an correct example: Aleksandar",greska1);
+            ProveraForme(rePrezime,"#prezime","You have entered a wrong format for surname. This is an correct example: Simić",greska2);
+            ProveraForme(reEmail,"#email","You have entered a wrong format for email. This is an correct example: aleksandar@gmail.com or aleksandar.simic@yahoo.com",greska3);
+            ProveraForme(rePayPal,"#pyapal","You must enter a right format for paypal email. A correct example: aleksandar@gmail.com or aleksandar.simic@yahoo.com",greska4);
+            ProveraForme(reVisaNumber,"#visa","You must enter a right format for your card number. A correct example: 1234-5678-9101-1123",greska5);
             //textarea
             provera = $('#TekstualnoPolje').val().length;
-            if(provera <10 || provera >50){ 
+            if(provera <10 || provera >100){ 
                 $('#TekstualnoPolje').parent().children(':last').removeClass('izbaci');
-                $('#TekstualnoPolje').parent().children(':last').html("Note must have minimum 10 and maximum 50 characters");
-                greska = true
+                $('#TekstualnoPolje').parent().children(':last').html("Note must have minimum 10 and maximum 100 characters");
+                greska6 = true
             }
             else{
                $('#TekstualnoPolje').parent().children(':last').addClass('izbaci');
                $('#TekstualnoPolje').parent().children(':last').html("");
-               greska = false
+               greska6 = false
             }
             //radio button
             let tipPlacanja = $('input[name=flexRadioDefault]:checked');
             if($(tipPlacanja).length ==0){
                 $('#flexRadioDefault1').parent().parent().children(':last').removeClass('izbaci');
                 $('#flexRadioDefault1').parent().parent().children(':last').html("You must choose a payment way");
-                greska = true
+                greska7 = true
             }else{
                 $('#flexRadioDefault1').parent().parent().children(':last').addClass('izbaci');
                 $('#flexRadioDefault1').parent().parent().children(':last').html("");
-                greska = false
+                greska7 = false
             }
             //padajuca lista
             let lista = document.querySelector("#floatingSelect");
             let listavalue = lista.options[lista.selectedIndex].value;
+            console.log(listavalue);
+            let listatext = lista.options[lista.selectedIndex].text;
+            console.log(listatext);
             if(listavalue == "0"){
                 $('#floatingSelect').parent().children(':last').removeClass('izbaci');
                 $('#floatingSelect').parent().children(':last').html("You must choose a package");
-                greska = true
+                greska8 = true
             }
             else{
                 $('#floatingSelect').parent().children(':last').addClass('izbaci');
                 $('#floatingSelect').parent().children(':last').html("");
-                greska = false
+                greska8 = false
             }
             //checkbox
             let robotcheck = $('input[name=ch]:checked');
             if($(robotcheck).length == 0){ 
                 $('#flexCheckDefault').parent().parent().children(':last').removeClass('izbaci');
-                $('#flexCheckDefault').parent().parent().children(':last').html("If you aren't a bot you will check this");
-                greska = true
+                $('#flexCheckDefault').parent().parent().children(':last').html("You must agree to the following.");
+                greska9 = true
             }
             else{
                 $('#flexCheckDefault').parent().parent().children(':last').addClass('izbaci');
                 $('#flexCheckDefault').parent().parent().children(':last').html("");
-                greska = false
+                greska9= false
             }
-            if(!greska){
+            //potvrda
+            if(!greska1 && !greska2 && !greska3 && !greska6 && !greska7 && !greska8 && !greska9 && (!greska4 || !greska5)){
                 IspisKonacan();
             }
             else{
@@ -111,12 +115,10 @@ window.onload = function(){
                 $('#dodatni1').parent().find('#dodatni2').addClass('izbaci')
                 $('#flexRadioDefault1').parent().parent().children(':last').addClass('izbaci');
                 $('#flexRadioDefault1').parent().parent().children(':last').html("");
-                greska = true
             }
             else{
                 $('#dodatni1').parent().children(':next').removeClass('izbaci')
                 $('#dodatni1').addClass('izbaci')
-                greska = false
             }
         })
         $('#flexRadioDefault2').on('click',function(){
@@ -125,17 +127,16 @@ window.onload = function(){
                 $('#dodatni2').parent().find('#dodatni1').addClass('izbaci')
                 $('#flexRadioDefault1').parent().parent().children(':last').addClass('izbaci');
                 $('#flexRadioDefault1').parent().parent().children(':last').html("");
-                greska = true
             }
             else{
                 $('#dodatni2').parent().children(':next').removeClass('izbaci')
                 $('#dodatni2').addClass('izbaci')
-                greska = false
             }
         })
     }
     if(url == "/reviews.html"){
         IspisMeny();
+        IspisFaq();
         IspisFooterLinks();
         //Jquery
             let brojac = 0,brojac2 = 0,brojac3 = 0,brojac4 = 0,brojac5 = 0,brojac6 = 0,brojac7 = 0,brojac8 = 0;
@@ -248,6 +249,7 @@ window.onload = function(){
     }
     if(url == "/about.html"){
         IspisMeny();
+        IspisAutora();
         IspisFooterLinks();
     }
 })
@@ -279,6 +281,123 @@ function IspisFooterLinks(){
     }
     ispis += `</ul>`
     blok.innerHTML = ispis;
+}
+//ispis FaQ sekcije
+function IspisFaq(){
+    let divIspis = document.querySelector("#grupaRew");
+    let br = 0;
+    let ispis = `<div class="row">`
+    let ispis2 = `<div class="row">`
+    let img =["img/ytlogo3.jpg","img/ytlogo4.jpg",
+    "img/ytlogo6.jpg","img/ytlogo7.jpg","img/ytlogo2.jpg","img/ytlogo8.jpg"
+    ,"img/ytlogo9.jpg","img/ytlogo10.jpg"];
+    let alt = ["dave","hothousemoss","TrueGawd","four0eight",
+    "Eu_Drip","hillbilly","ijolp","jrocks26"];
+    let h = ["Davej974","Hothousemoss","TrueGawd","Four0eight",
+    "Eu Drip","Hillbilly","Ijolp","Jrocks26"];
+    let p1 = ["Another great edit, always follows instructions, pleasure to work with.",
+    "This is my second time working with this seller. He's always super nice, gets it done on time and the editing is always amazing. Glad i chose to work with him again.",
+    "Great work! Very understanding. I love working with him!",
+    "Great working with the seller! He was quick to respond, open to feedback, and then adjusted based on my feedback. Exactly what I was hoping for!",
+    "I absolutely loved how he edited my video. I'm looking forward to working with him more.",
+    "Another great vid done by him requested a little longer of a video and he hooked it up. Thanks mate!",
+    "The video is awesome! I will for sure be sending you more business!",
+    "Quality was amazing. Highlighted all the best parts and made it look very professionally made. Would and will easily buy again. Thank you!"]
+    let p2 = [`A youtuber with 4.5k subscribers he is also streaming on twitch and on there he has 4.4k followers. 
+    He creates content like MrBeast and he is making twitch donations type of videos. He is very skilled at what he does and i think he will have
+    a bright future`,
+    `He has 118 subscribers and he is making minecraft survival and funny moments type of videos.He is still 
+    strating out so he is just learning things like how to record a video with obs.`,
+    `He is a very big youtuber with 188k subscribers. He does mainly reaction videos but he has a second channel 
+    where he plays games. And he also streams gaming or reactions over on his twitch channel. He has an amazing audience and i am happy to be a bart of it.</p>`,
+    `He has 5k subscribers and he is making modded minecraft gameplays.He is not as consistant as a 
+    youtuber should be but i think he is on the right path.`,
+    `Very funny youtuber who came from TikTok with 6m followers and now on YouTube has 95k subscribers. In Terms of content he does horror types of games and the videos are so enjoyable to watch.`,
+    `He started posting videos on YouTube 3 month ago and at the moment he has 77 subscribers. 
+    He does mainly Call of Duty: Warzone videos. He is a regular buyer and it means a lot to see him come back every time.
+    He can do a lot of cool stuff on youtube just give him some time.`,
+    `Ijolp has 209 subscribers and he mainly does Sea of Thieves videos. 
+    He also streams on twitch and has his very own podcast. And i really like his podcasts so i would recommend for you to go and check it out when
+    you have the time.`,
+    `They have 80 subscribers at the moment and they are making Guild Wars 2 videos. 
+    They also have their twitch channel were they stream those games. They are focusing more on the streaming at the moment which is fantastic since they
+    very popular on the twitch platform`]
+    let idtekst = ["more","more2","more3","more4","more5","more6","more7","more8"]
+    let ida = ["promeni","promeni2","promeni3","promeni4","promeni5","promeni6","promeni7","promeni8"]
+    for(let i=0;i<img.length;i++){
+        ispis += `<div class="col-xxl-3 col-md-6 col-12 ">
+                    <div class="card as-width border border-dark">
+                        <img src="${img[i]}"  class="card-img-top" alt="${alt[i]}"/>
+                        <div class="card-body">
+                            <h5 class="card-title">${h[i]} <span class="iconify as-font" data-icon="emojione:star"></span>5</h5>
+                            <p class="card-text">${p1[i]}</p>
+                            <p class="card-text izbaci" id="${idtekst[i]}">${p2[i]}</p>
+                        </div>
+                        <div>
+                            <a href="reviews.html" class="btn btn-dark btn-outline-light as-button mx-auto mb-4 mt-3" id="${ida[i]}">Show more</a>
+                        </div>
+                    </div>
+                </div>`
+        br++;
+        if(br == 4){
+            for(let i=4;i<img.length;i++){
+                ispis2+=`<div class="col-xxl-3 col-md-6 col-12 ">
+                            <div class="card as-width border border-dark">
+                                <img src="${img[i]}"  class="card-img-top" alt="${alt[i]}"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">${h[i]} <span class="iconify as-font" data-icon="emojione:star"></span>5</h5>
+                                    <p class="card-text">${p1[i]}</p>
+                                    <p class="card-text izbaci" id="${idtekst[i]}">${p2[i]}</p>
+                                </div>
+                                <div>
+                                    <a href="reviews.html" class="btn btn-dark btn-outline-light as-button mx-auto mb-4 mt-3" id="${ida[i]}">Show more</a>
+                                </div>
+                            </div>
+                        </div>`
+            }
+            break;
+        }
+    }
+    ispis+="</div>";
+    ispis2+="</div>";
+    divIspis.innerHTML = ispis;
+    divIspis.innerHTML += ispis2;
+}
+//ispis Paketa
+function IspisPaketa(){
+    let divPaketi = document.querySelector("#priceshow");
+    let ispis =""
+    let title =["Bronze","Silver","Gold"];
+    let opis1 =["Basic editing with cuts, zooms, music etc.","Bronze package + memes and sound effects.","Silver package + subtitles and animations."];
+    let cena =["$10","$15","$35"];
+    let opis2 =["Basic but effective videos","Funny type of video + thumbnail","Professional videos"];
+    let motiontick =["text-secondary","text-success","text-success"];
+    let subtitlestick =["text-secondary","text-secondary","text-success"];
+    let minutes1 =["up to 60 minutes","up to 105 minutes","up to 180 minutes"];
+    let minutes2 =["10 minutes","20 minutes","45 minutes"];
+    let revisions =["2","3","5"];
+    let delivery =["2 days","3 days","4 days"];
+    let links =["bronze.html","silver.html","gold.html"];
+    for(let i=0;i<title.length;i++){
+        ispis+=`<div class="col-lg-3 col-12 as-transparent2 border border-dark ms-3 rounded mb-5 as-width2">
+                    <h2 class="as-about-h1 pt-3 pb-2">${title[i]}</h2>
+                    <p class="as-about-h1 fs-6 as-text-edit"><strong>${opis1[i]}</strong></p>
+                    <h2 class="as-about-h1 pt-4 pb-4">${cena[i]}</h2>
+                    <p class="as-about-h1 fs-6 pb-4 as-text-edit"><strong>${opis2[i]}</strong></p>
+                    <p class="as-about-h1"><span class="iconify me-1 text-success fs-5" data-icon="eva:checkmark-fill"></span>Color Grading</p>
+                    <p class="as-about-h1"><span class="iconify me-1 text-success fs-5" data-icon="eva:checkmark-fill"></span>Sound Design</p>
+                    <p class="as-about-h1"><span class="iconify me-1 ${motiontick[i]} fs-5" data-icon="eva:checkmark-fill"></span>Motion Graphics</p>
+                    <p class="as-about-h1"><span class="iconify me-1 ${subtitlestick[i]} fs-5" data-icon="eva:checkmark-fill"></span>Subtitles</p>
+                    <p class="as-about-h1"><span class="iconify me-1 text-success fs-5" data-icon="akar-icons:arrow-right"></span>Raw gameplay: <strong >${minutes1[i]}</strong></p>
+                    <p class="as-about-h1"><span class="iconify me-1 text-success fs-5" data-icon="akar-icons:arrow-right"></span>Running Time: <strong>${minutes2[i]}</strong></p>
+                    <p class="as-about-h1"><span class="iconify me-1 text-success fs-5" data-icon="akar-icons:arrow-right"></span>Revisions: <strong>${revisions[i]}</strong></p>
+                    <p class="as-about-h1 pb-3"><span class="iconify me-1 text-success fs-5" data-icon="akar-icons:arrow-right"></span>Delivery Time: <strong>${delivery[i]}</strong></p>
+                    <div class="card-body text-center mb-2">
+                    <a href="${links[i]}"class="btn btn-dark btn-outline-light">See the video examples here!</a>
+                    </div>
+                </div>`
+    }
+    divPaketi.innerHTML = ispis;
 }
 //ispisi videa
 function IspisVideo(nizsrc){
@@ -356,7 +475,7 @@ function slajder(){
     tajmer = setTimeout(slajder, 4000);
 }
 //forma ispis i provera
-var greska = false;
+var greska1=false,greska2=false,greska3=false,greska4=false,greska5=false,greska6=false,greska7=false,greska8=false,greska9=false
 function IspisForme(type,id,placeholder,sadrzaj,valueliste,optionliste,idradio,valueradio,sadrzajradio){
     let ispis = `<form action="porudzbina.php" id="forma" method="post">`;
     //ispis tekstualnih polja
@@ -413,7 +532,7 @@ function IspisForme(type,id,placeholder,sadrzaj,valueliste,optionliste,idradio,v
                 <div class="form-check mb-3 mt-3">
                     <input class="form-check-input border-dark" type="checkbox" name="ch" value="check" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
-                        Make sure to check if you are not a robot
+                    By checking this you agree to the following <a href="https://www.google.com/" target="_blank">Terms of service</a>
                     </label>
                 </div>
                 <p class="alert alert-danger mt-3 izbaci"></p>
@@ -426,26 +545,48 @@ function IspisForme(type,id,placeholder,sadrzaj,valueliste,optionliste,idradio,v
     ispis +=`</form>`
     $('#blokforme').html(ispis);
 }
-function ProveraForme(reg,idpolja,greska){
+function ProveraForme(reg,idpolja,greska,provera){
     if(!$(idpolja).val().match(reg)){
         $(idpolja).parent().children(':last').removeClass('izbaci');
         $(idpolja).parent().children(':last').html(greska)
-        greska = true;
+        provera = true
     }
     else{
         $(idpolja).parent().children(':last').addClass('izbaci');
         $(idpolja).parent().children(':last').html('');
-        greska = false;
+        provera = false
     }
 }
 function IspisKonacan(){
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
     let divIspis = document.querySelector("#odlican")
     divIspis.setAttribute("class","alert alert-success mt-4");
-    divIspis.innerHTML = 'You have successfully placed the order';
+    divIspis.innerHTML = `You have successfully placed the order. Order date placed: ${day}/${month}/${year}`;
     document.querySelector('#forma').reset();
 }
 function ResetKonacan(){
     let divIspis = document.querySelector("#odlican")
     divIspis.removeAttribute("class","alert alert-success mt-4");
     divIspis.innerHTML = '';
+}
+function IspisAutora(){
+    let divautor = document.querySelector("#autordiv");
+    let isipsautor = `<div class="row" id="centar">
+    <div class="col-12 as-about-h2 pb-3 ps-2 pe-2">
+        <h2>About me</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col ">
+        <div class="as-width" id="aboutdiv">
+            <img src="img/slika.jpg" class="card-img-top border border-dark" id="about" alt="editor,animator,photoshop,business">
+                <h5 class="card-title">Aleksandar Simić</h5>
+                <p class="card-text">31/21</p>
+        </div>
+    </div>
+</div>`
+    divautor.innerHTML = isipsautor;
 }
