@@ -39,16 +39,29 @@ window.onload = function(){
         IspisForme(type,id,placeholder,sadrzaj,valueListe,optionliste,idradio,valueradio,sadrzajradio);
         reIme = /^[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}(\s[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}){0,1}$/;
         rePrezime = /^[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}(\s[A-ZČĆŠĐŽ][a-zčćšđž]{2,14}){0,1}$/;
-        reEmail = /^[a-z]{3,15}(\.)?([a-z]{3,15})?\@((gmail\.com)|(yahoo\.com))$/;
-        rePayPal = /^[a-z]{3,15}(\.)?([a-z]{3,15})?\@((gmail\.com)|(yahoo\.com))$/;
+        reEmail = /^[a-z]{3,15}(\.[a-z]{3,15})?\@((gmail\.com)|(yahoo\.com))$/;
+        rePayPal = /^[a-z]{3,15}(\.[a-z]{3,15})?\@((gmail\.com)|(yahoo\.com))$/;
         reVisaNumber = /^[0-9]{4}(\-([0-9]{4})){3}$/
         //Obrada
             $('#taster').click(function(){
             ProveraForme(reIme,"#ime","You have entered a wrong format for name. This is an correct example: Aleksandar",greska1);
             ProveraForme(rePrezime,"#prezime","You have entered a wrong format for surname. This is an correct example: Simić",greska2);
-            ProveraForme(reEmail,"#email","You have entered a wrong format for email. This is an correct example: aleksandar@gmail.com or aleksandar.simic@yahoo.com",greska3);
-            ProveraForme(rePayPal,"#pyapal","You must enter a right format for paypal email. A correct example: aleksandar@gmail.com or aleksandar.simic@yahoo.com",greska4);
-            ProveraForme(reVisaNumber,"#visa","You must enter a right format for your card number. A correct example: 1234-5678-9101-1123",greska5);
+            ProveriKarticu(reVisaNumber,"#visa","You must enter a right format for your card number. A correct example: 1234-5678-9101-1123",greska5);
+            DodatnaProvera(rePayPal,"#pyapal","#ime","You can't have a first name as same as the beginning of your email address or the format is not right. The right example for the name Aleksandar is: aca@gmail.com",greska4)
+            let ime = document.querySelector('#ime').value;
+            let value = document.querySelector('#email').value;
+            if(value.indexOf(ime.toLowerCase()) == 0 || !$('#email').val().match(reEmail)){
+                $('#email').parent().children(':last').removeClass('izbaci');
+                $('#email').parent().children(':last').html("You can't have a first name as same as the beginning of your email address or the format is not right. The right example for the name Aleksandar is: aca@gmail.com");
+                console.log("Greska");
+                greska3 = true;
+            }
+            else{ 
+                console.log("Uspeh")
+                $('#email').parent().children(':last').addClass('izbaci');
+                $('#email').parent().children(':last').html("");
+                greska3 = false
+            }
             //textarea
             provera = $('#TekstualnoPolje').val().length;
             if(provera <10 || provera >100){ 
@@ -101,7 +114,7 @@ window.onload = function(){
                 greska9= false
             }
             //potvrda
-            if(!greska1 && !greska2 && !greska3 && !greska6 && !greska7 && !greska8 && !greska9 && (!greska4 || !greska5)){
+            if(!greska1 && !greska2 && !greska3 && !greska6 && !greska7 && !greska8 && !greska9 && (!greska4 && greska5 || greska4 && !greska5)){
                 IspisKonacan();
             }
             else{
@@ -475,7 +488,7 @@ function slajder(){
     tajmer = setTimeout(slajder, 4000);
 }
 //forma ispis i provera
-var greska1=false,greska2=false,greska3=false,greska4=false,greska5=false,greska6=false,greska7=false,greska8=false,greska9=false
+var greska1=false,greska2=false,greska3=false,greska4=true,greska5=true,greska6=false,greska7=false,greska8=false,greska9=false
 function IspisForme(type,id,placeholder,sadrzaj,valueliste,optionliste,idradio,valueradio,sadrzajradio){
     let ispis = `<form action="porudzbina.php" id="forma" method="post">`;
     //ispis tekstualnih polja
@@ -549,12 +562,12 @@ function ProveraForme(reg,idpolja,greska,provera){
     if(!$(idpolja).val().match(reg)){
         $(idpolja).parent().children(':last').removeClass('izbaci');
         $(idpolja).parent().children(':last').html(greska)
-        provera = true
+        provera = true;
     }
     else{
         $(idpolja).parent().children(':last').addClass('izbaci');
         $(idpolja).parent().children(':last').html('');
-        provera = false
+        provera = false;
     }
 }
 function IspisKonacan(){
@@ -589,4 +602,32 @@ function IspisAutora(){
     </div>
 </div>`
     divautor.innerHTML = isipsautor;
+}
+function DodatnaProvera(reg,idpolja,imeId,greska,provera){
+    let ime = document.querySelector(imeId).value;
+    let paypalval = document.querySelector(idpolja).value;
+    if(paypalval.indexOf(ime.toLowerCase()) == 0 || !$(idpolja).val().match(reg)){
+        $(idpolja).parent().children(':last').removeClass('izbaci');
+        $(idpolja).parent().children(':last').html(greska);
+        console.log("Greska");
+        greska4 = true;
+    }
+    else{ 
+        console.log("Uspeh")
+        $(idpolja).parent().children(':last').addClass('izbaci');
+        $(idpolja).parent().children(':last').html("");
+        greska4 = false;
+    }
+}
+function ProveriKarticu(reg,idpolja,greska,provera){
+    if(!$(idpolja).val().match(reg)){
+        $(idpolja).parent().children(':last').removeClass('izbaci');
+        $(idpolja).parent().children(':last').html(greska)
+        greska5 = true;
+    }
+    else{
+        $(idpolja).parent().children(':last').addClass('izbaci');
+        $(idpolja).parent().children(':last').html('');
+        greska5 = false;
+    }
 }
