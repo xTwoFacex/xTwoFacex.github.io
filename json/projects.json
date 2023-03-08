@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1,
+        "slika" : {
+            "src" : "assets/img/ytlogo2.jpg",
+            "alt" : "Eu Drip"
+        },
+        "naziv" : "Eu Drip",
+        "opis" : "Very big YouTuber with almost 100k subscribers. He does gaming content in genereal with some try not laugh challenges here and there.",
+        "subscribers" : "95k",
+        "followers" : "6.4m",
+        "link" : "https://www.youtube.com/c/EUDrip"
+    },
+    {
+        "id" : 2,
+        "slika" : {
+            "src" : "assets/img/ytlogo1.jpg",
+            "alt" : "Truegawd"
+        },
+        "naziv" : "Truegawd",
+        "opis" : "Very big YouTuber with 188k subscribers.He does mainly reaction videos but he has a second channel where he plays games.",
+        "subscribers" : "244k",
+        "followers" : "9.3k",
+        "link" : "https://www.youtube.com/c/TrueGawd"
+    },
+    {
+        "id" : 3,
+        "slika" : {
+            "src" : "assets/img/ytlogo3.jpg",
+            "alt" : "Davej974"
+        },
+        "naziv" : "Davej974",
+        "opis" : "Upcoming star of YouTube with 4.5k subscribers. He does videos like MrBeast for example donation videos to twitch streamers.",
+        "subscribers" : "4.5k",
+        "followers" : "4.4k",
+        "link" : "https://www.youtube.com/"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "id" : 1,
+        "ime" : "Aleksandar",
+        "prezime" : "Simić",
+        "slika" : {
+            "src" : "assets/img/slika.jpg",
+            "alt" : "Aleksandar Simić"
+        },
+        "opis" : "Hi my name is Aleksandar and i am the video editor for gaming content. I have been editing for quite some time now and i am really enjoying it."
+    },
+    {
+        "id" : 2,
+        "ime" : "Boris",
+        "prezime" : "Jovanović",
+        "slika" : {
+            "src" : "assets/img/tim1.jpg",
+            "alt" : "Boris Jovanović"
+        },
+        "opis" : "Hi my name is Boris and i edit short form content. I have a ton of experience and i create all kinds of short videos."
+    },
+    {
+        "id" : 3,
+        "ime" : "Stefen",
+        "prezime" : "Milić",
+        "slika" : {
+            "src" : "assets/img/tim2.jpg",
+            "alt" : "Stefan Milić"
+        },
+        "opis" : "Hi my name is Stefan and i am the editor for Education, Sport and Cooking videos. I love what i do and i am excited to help you reach your goals."
+    },
+    {
+        "id" : 1,
+        "ime" : "Mateja",
+        "prezime" : "Radivojević",
+        "slika" : {
+            "src" : "assets/img/tim3.jpg",
+            "alt" : "Mateja Radivojević"
+        },
+        "opis" : "Hi my name is Mateja and i am the editor for shorts and for long form content. I am editing all of the categories and i am always improving."
+    }
+]

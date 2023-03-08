@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "naziv" : "Gaming"
+    },
+    {
+        "id" : 2,
+        "naziv" : "Education"
+    },
+    {
+        "id" : 3,
+        "naziv" : "Sport"
+    },
+    {
+        "id" : 4,
+        "naziv" : "Cooking"
+    },
+    {
+        "id" : 5,
+        "naziv" : "Entertainment"
+    },
+    {
+        "id" : 6,
+        "naziv" : "Music"
+    }
+]

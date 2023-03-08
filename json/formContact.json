@@ -1,0 +1,42 @@
+[
+    {
+        "id" : 1,
+        "type" : "text",
+        "idname" : "ime",
+        "placeholder" : "First Name",
+        "labelsadrzaj" : "Enter your first name"
+    },
+    {
+        "id" : 2,
+        "type" : "text",
+        "idname" : "prezime",
+        "placeholder" : "Last Name",
+        "labelsadrzaj" : "Enter your last name"
+    },
+    {
+        "id" : 3,
+        "type" : "mail",
+        "idname" : "mail",
+        "placeholder" : "Email",
+        "labelsadrzaj" : "Enter your email"
+    },
+    {
+        "id" : 4,
+        "type" : "drop down list",
+        "labelsadrzaj" : "Tell us with what you need help",
+        "option":[
+            {
+                "value" : 1,
+                "sadrzaj" : "Details for a package"
+            },
+            {
+                "value" : 2,
+                "sadrzaj" : "Questions for our work"
+            },
+            {
+                "value" : 3,
+                "sadrzaj" : "Questions about the team"
+            }
+        ]
+    }
+]

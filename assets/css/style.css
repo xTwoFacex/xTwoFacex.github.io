@@ -1,0 +1,168 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@font-face {
+    font-family: font;
+    src: url(OpenSans-VariableFont_wdth\,wght.ttf);
+}
+@font-face {
+    font-family: fontheader;
+    src: url(BungeeShade-Regular.ttf);
+}
+body {
+    font-family: font;
+}
+a {
+    text-decoration: none !important;
+    color: #000 !important;
+    padding-left: 20px;
+    
+}
+a:hover {
+    color: #000 !important
+}
+.as-font {
+    font-family: fontheader;
+}
+.as-color {
+    color: #636363 !important
+}
+.as-bg-gray {
+    background-color: #f7f7f7 !important;
+}
+.as-center {
+    text-align: center;
+}
+.as-transparent {
+    background: rgba(255, 255, 255, 0.9);
+}
+.bg-img {
+    background-image: url('../img/pozadina1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background-size: cover;
+}
+.random h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 700;
+}
+.random h2 {
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: 700;
+}
+.as-about-h1 {
+    text-align: center;
+}
+.as-about-h2 {
+    text-align: center;
+}
+.as-about-h1 h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.as-about-h2 h2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.as-about-h1 p {
+    font-size: 22px;
+}
+.row {
+    --bs-gutter-x: 0rem !important;
+}
+.sakrij, .slajd{
+    display: none;
+}
+#slajder .aktivan{
+    display: block;
+}
+.as-width {
+    width: 70%;
+    margin-left: 70px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.as-project {
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.as-transparent2 {
+    background-color: #f0eded !important
+}
+.izbaci {
+    display: none;
+}
+#form {
+    padding-right: 20px;
+}
+#tekst {
+    padding-right: 20px;
+}
+.form-check-input:checked {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+}
+.form-control {
+    box-shadow: 0 0 0 .0rem rgba(0, 0, 0, 1) !important
+}
+.form-select {
+    box-shadow: 0 0 0 .0rem rgba(0, 0, 0, 1) !important
+}
+.vid{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.opisi{
+    text-align: center;
+}
+.promena{
+    color: #fff !important;
+}
+.slike{
+    width: 100px;
+    height: 100px;
+}
+table{
+    margin: 0px auto;
+}
+#kraj{
+    display: flex;
+    justify-content: center;
+}
+#kraj button{
+    margin-right: 1%;
+    margin-left: 1%;
+}
+.prazno{
+    margin: 0px auto;
+}
+.pozicija{
+    display: flex;
+    justify-content: center;
+}
+#broj1{
+    width: 20%;
+}
+#broj2{
+    width: 20%;
+}
+#broj3{
+    width: 20%;
+}
+#broj4{
+    width: 20%;
+}
+#about{
+    width: 434PX;
+    height: 578px;
+}
+#aboutdiv{
+    margin: 0px;
+    width: 100%;
+}

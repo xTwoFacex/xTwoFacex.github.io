@@ -1,0 +1,26 @@
+[
+    {
+        "vrednost" : "name-asc",
+        "naziv" : "Name A-Z"
+    },
+    {
+        "vrednost" : "name-desc",
+        "naziv" : "Name Z-A"
+    },
+    {
+        "vrednost" : "price-asc",
+        "naziv" : "Price ascending"
+    },
+    {
+        "vrednost" : "price-desc",
+        "naziv" : "Price descending"
+    },
+    {
+        "vrednost" : "rating-asc",
+        "naziv" : "Rating ascending"
+    },
+    {
+        "vrednost" : "rating-desc",
+        "naziv" : "Rating descending"
+    }
+]

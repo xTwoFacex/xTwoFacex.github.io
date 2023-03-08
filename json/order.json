@@ -1,0 +1,70 @@
+[
+    {
+        "id" : 1,
+        "nazivPaketa" : "Bronze",
+        "opis" : "Basic editing with cuts, zooms, music etc.",
+        "colorGrading" : true,
+        "soundDesign": true,
+        "motionGraphics": false,
+        "subtitles": false,
+        "rawGameplay": 60,
+        "runningTime": 10,
+        "revisions": 2,
+        "deliveryTime": 2,
+        "price":{
+            "staraCena" : null,
+            "trenutnaCena" : 10
+        }
+    },
+    {
+        "id" : 2,
+        "nazivPaketa" : "Silver",
+        "opis" : "Bronze package + memes and sound effects.",
+        "colorGrading" : true,
+        "soundDesign": true,
+        "motionGraphics": true,
+        "subtitles": false,
+        "rawGameplay": 105,
+        "runningTime": 20,
+        "revisions": 3,
+        "deliveryTime": 3,
+        "price":{
+            "staraCena" : null,
+            "trenutnaCena" : 15
+        }
+    },
+    {
+        "id" : 3,
+        "nazivPaketa" : "Gold",
+        "opis" : "Silver package + subtitles and animations.",
+        "colorGrading" : true,
+        "soundDesign": true,
+        "motionGraphics": true,
+        "subtitles": true,
+        "rawGameplay": 180,
+        "runningTime": 45,
+        "revisions": 5,
+        "deliveryTime": 4,
+        "price":{
+            "staraCena" : 50,
+            "trenutnaCena" : 35
+        }
+    },
+    {
+        "id" : 4,
+        "nazivPaketa" : "Shorts bundle",
+        "opis" : "*NEW* Short form Content editing",
+        "colorGrading" : true,
+        "soundDesign": true,
+        "motionGraphics": true,
+        "subtitles": true,
+        "rawGameplay": 10,
+        "runningTime": 60,
+        "revisions": 5,
+        "deliveryTime": 8,
+        "price":{
+            "staraCena" : null,
+            "trenutnaCena" : 20
+        }
+    }
+]

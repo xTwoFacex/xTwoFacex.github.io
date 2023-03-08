@@ -1,0 +1,26 @@
+[
+    {
+        "href" : "index.html",
+        "naziv" : "Home"
+    },
+    {
+        "href" : "pricing.html",
+        "naziv" : "Pricing"
+    },
+    {
+        "href" : "examples.html",
+        "naziv" : "Examples"
+    },
+    {
+        "href" : "cart.html",
+        "naziv" : "Cart"
+    },
+    {
+        "href" : "contact.html",
+        "naziv" : "Contact"
+    },
+    {
+        "href" : "about.html",
+        "naziv" : "About Me"
+    }
+]

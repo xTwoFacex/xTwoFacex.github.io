@@ -1,0 +1,22 @@
+[
+    {
+        "href":"https://www.facebook.com/",
+        "dataIcon" : "cib:facebook-f"
+    },
+    {
+        "href":"https://www.instagram.com/",
+        "dataIcon" : "akar-icons:instagram-fill"
+    },
+    {
+        "href":"https://www.youtube.com/",
+        "dataIcon" : "ant-design:youtube-outlined"
+    },
+    {
+        "href":"web2.pdf",
+        "dataIcon" : "carbon:document"
+    },
+    {
+        "href":"sitemap.xml",
+        "dataIcon" : "fa:sitemap"
+    }
+]

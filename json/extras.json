@@ -1,0 +1,18 @@
+[
+    {
+        "id" : 1,
+        "naziv" : "Subtitles"
+    },
+    {
+        "id" : 2,
+        "naziv" : "Color grading"
+    },
+    {
+        "id" : 3,
+        "naziv" : "Motion graphics"
+    },
+    {
+        "id" : 4,
+        "naziv" : "Sound design"
+    }
+]
